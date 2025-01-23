@@ -12,7 +12,8 @@ body {
 }
 
 .homepage {
-    position: fixed;
+    /* position: fixed; */
+    height: 130vh;
     margin: auto;
     left: 0;
     right: 0;
