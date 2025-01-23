@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="img/favicon/android-chrome-512x512.png" sizes="512x512">
+<link rel="icon" type="image/png" href="img/favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+<title>Workout</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style/reset.css">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<!-- <script src="script/jquery-3.7.1.min.js"></script>
+<script src="script/script.js"></script> -->
+
+
+<body>
+
+    <button id="refreshButton"><img src="assets/refresh.png" alt=""></button>
+
+    <div class="homepage">
+        <button id="settingsButton"><img src="assets/settings.png" alt=""></button>
+
+        <p id="currentPoints" class="homepagePoints">0</p>
+
+        <p id="feedbackPoints">+50 </p>
+
+        <div class="categoryContainer">
+
+            <button class="category" id="swimButton">
+
+
+                <img src="assets/swim.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Swimming</p>
+            </button>
+
+            <button class="category" id="gymButton">
+                <img src="assets/gym.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Gym</p>
+            </button>
+
+            <button class="category" id="fastFoodButton">
+                <img src="assets/fastFood.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Fastfood</p>
+            </button>
+
+            <button class="category" id="tobaccoButton">
+                <img src="assets/tobacco.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Tobacco</p>
+            </button>
+
+            <button class="category" id="waterButton">
+                <img src="assets/water.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Water</p>
+            </button>
+
+            <button class="category" id="saladButton">
+                <img src="assets/salad.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Salads</p>
+            </button>
+
+            <button class="category" id="alcoholButton">
+                <img src="assets/alcohol.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Alcohol</p>
+            </button>
+
+            <button class="category" id="stretchButton">
+                <img src="assets/stretches.png" class="buttonImage" id="" alt="">
+                <p class="buttonLabel">Stretches</p>
+            </button>
+        </div>
+
+        <button id="couponsButton">
+            <img src="assets/coupon.png" alt="">
+            <p>Coupons</p>
+        </button>
+    </div>
+
+    <!-- ———————————————————————————————————— Overlay Accept Category —————————————————————————————————————————— -->
+
+    <div class="overlayPopUp" id="clickCategoryScreenSmoke">
+        <div class="clickCategoryContainerSmoke">
+            <p>How many cigarretes?</p>
+            <button class="numberCigarettes">1</button>
+            <button class="numberCigarettes">2</button>
+            <button class="numberCigarettes">3</button>
+            <button class="numberCigarettes">4</button>
+            <button class="numberCigarettes">5</button>
+            <button class="numberCigarettes">6</button>
+            <button class="numberCigarettes">7</button>
+            <button class="numberCigarettes">8</button>
+            <button class="numberCigarettes">9</button>
+            <button class="numberCigarettes">10</button>
+            <button class="numberCigarettes">11</button>
+            <button class="numberCigarettes">12</button>
+            <button class="numberCigarettes">13</button>
+            <button class="numberCigarettes">14</button>
+            <button class="numberCigarettes">15</button>
+            <div class="cancelAcceptContainer">
+                <button class="cancelButton" id="cancelSmoke">Cancel</button>
+                <button class="acceptButton" id="acceptSmoke">Accept</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overlayPopUp" id="clickCategoryScreen">
+        <div class="clickCategoryContainer">
+            <p class="popUpPointsLine">Confirm <span id="categoryTitle">Category</span></p>
+            <div class="cancelAcceptContainer">
+                <button class="cancelButton" id="cancel">Cancel</button>
+                <button class="acceptButton" id="accept">Accept</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ———————————————————————————————————— SETTINGS —————————————————————————————————————————— -->
+
+
+    <div class="settingsPage">
+
+        <img src="assets/backArrow.png" class="backArrow" alt="">
+        <h1>Edit Points</h1>
+
+        <ul class="settingsList">
+            <li>
+                <p>Swimming</p> <input type="number" id="swimmingEditPoints">
+            </li>
+            <li>
+                <p>Gym</p> <input type="number" id="gymEditPoints">
+            </li>
+            <li>
+                <p>FastFood</p> <input type="number" id="fastfoodEditPoints">
+            </li>
+            <li>
+                <p>Tobacco</p> <input type="number" id="tobaccoEditPoints">
+            </li>
+            <li>
+                <p>Water</p> <input type="number" id="waterEditPoints">
+            </li>
+            <li>
+                <p>Salads</p> <input type="number" id="saladsEditPoints">
+            </li>
+            <li>
+                <p>Alcohol</p> <input type="number" id="alcoholEditPoints">
+            </li>
+
+            <li>
+                <p>Stretches</p> <input type="number" id="stretchesEditPoints">
+            </li>
+        </ul>
+
+
+        <button id="saveEditPoints">Save</button>
+
+
+    </div>
+
+
+
+
+
+    <!-- ———————————————————————————————————— COUPONS —————————————————————————————————————————— -->
+    
+    <div class="couponsScreen">
+        <img src="assets/backArrow.png" class="backArrow" alt="">
+        <h1>Coupons</h1>
+
+        <div class="couponStoreList">
+            <div class="couponScreenPointsContainer">
+
+                <p class="couponScreenPointsContainerText">Current Points</p>
+                <p id="currentPointsCoupons" class="couponPoints">0</p>
+            </div>
+
+
+
+            <!-- <div class="couponSingle">
+                <div class="coupon">
+                    <img class="couponImage " src="assets/coupon.png" alt="">
+                    <p class="couponName">Name 4</p>
+                    <p class="couponPrice">30</p>
+                </div>
+                <button class="deleteCoupon"><img src="assets/trash.png" alt=""></button>
+            </div> -->
+
+        </div>
+        <!-- ———————————————————————————————————— BUY COUPONS —————————————————————————————————————————— -->
+
+        <div class="overlayPopUp" id="clickCouponScreen">
+            <div class="clickCategoryContainer">
+                <div>
+                    <p class="popUpQuestion">Confirm coupon <span id="nameOfCoupon">name</span></p>
+                    <p class="popUpPointsLine"><span id="couponPurchasePoints">50 </span> points</p>
+                </div>
+                <div class="cancelAcceptContainer">
+                    <button class="cancelButton" id="cancelCouponPurchase">Cancel</button>
+                    <button class="acceptButton" id="acceptCouponPurchase">Accept</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ———————————————————————————————————— USE COUPONS —————————————————————————————————————————— -->
+        <div class="overlayPopUp" id="clickCouponUseScreen">
+            <div class="clickCategoryContainer">
+                <p>Do you want to use the coupon <span id="nameOfUseCoupon">name</span></p>
+
+                <div class="cancelAcceptContainer">
+                    <button class="cancelButton cancel" id="cancelCouponUse">Cancel</button>
+                    <button class="acceptButton" id="acceptCouponUse">Accept</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <h2 class="availableCouponsTitle">Available</h2>
+        <div class="availableCoupons"></div>
+
+
+
+        <!-- ———————————————————————————————————— CREATE COUPONS —————————————————————————————————————————— -->
+        <button id="addCoupon"><img src="assets/add.svg" alt="" style="margin-right: 5px;">Add Coupon</button>
+
+
+        <div class="overlayPopUp" id="clickCouponAddScreen">
+            <div class="clickCategoryContainer">
+                <p class="AddCouponText"><img class="couponImageText" src="assets/coupon.png" alt="">Add a Coupon</p>
+
+                <label>Name of Coupon</label>
+                <input type="text" id="newCouponName">
+
+                <label>How many points?</label>
+                <input type="number" id="newCouponPrice">
+                <div class="cancelAcceptContainer">
+                    <button class="cancelButton cancel" id="cancelSaveNewCoupon">Cancel</button>
+                    <button class="acceptButton" id="saveNewCoupon">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
