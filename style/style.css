@@ -1,0 +1,563 @@
+@font-face {
+    font-family: "Jura Bold";
+    src: url(../type/Jura-Bold.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: "Jura Bold";
+}
+
+.homepage {
+    position: fixed;
+    /* height: 130vh; */
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.cancelAcceptContainer{
+column-count: 2;
+margin-top: 40px;
+}
+
+.categoryContainer {
+    column-count: 2;
+    column-gap: 20px;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 180px;
+
+    
+}
+
+.category {
+    width: 100%;
+    height: 110px;
+
+}
+
+.categoryContainer>* {
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}
+
+
+#swimButton {
+    background-color: #C0EBFF;
+}
+
+#gymButton {
+    background-color: #393939;
+}
+
+#fastFoodButton {
+    background-color: #FFD3D7;
+}
+
+#tobaccoButton {
+    background-color: #FFD380;
+}
+
+#waterButton {
+    background-color: #DDF7FF;
+}
+
+#saladButton {
+    background-color: #E7FFB9;
+}
+
+
+#alcoholButton {
+    background-color: #FBB9EA;
+}
+
+#stretchButton {
+    background-color: #AEE0BF;
+}
+
+
+#settingsButton, #refreshButton {
+    position: fixed;
+    border: none;
+    left: 20px;
+    top: 20px;
+    background-color: transparent;
+    padding: 0;
+}
+
+#refreshButton{
+    right: 20px;
+    left: auto;
+}
+
+.homepagePoints {
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 100px;
+}
+
+.categoryContainer {}
+
+.category {
+    border: none;
+    border-radius: 15px;
+    padding: 0;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 15px 1px rgba(101, 101, 101, 0.25);
+    -webkit-appearance: none;
+    overflow: hidden;
+}
+
+.category img {
+    margin-bottom: 30px;
+}
+
+.category p {
+    font-family: "Jura Bold";
+    font-size: 20px;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    bottom: 0;
+    line-height: 33px;
+    color: black;
+}
+
+.homepagePoints {
+    font-family: "Jura Bold";
+}
+
+#couponsButton {
+    font-family: "Jura Bold";
+    width: 90%;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+    background-color: #FFF1C1;
+
+    display: flex;
+    align-items: center;
+    /* Vertically center items */
+    justify-content: center;
+}
+
+#couponsButton>* {
+    display: inline-block;
+}
+
+#couponsButton img {
+    left: 15px;
+    position: absolute;
+}
+
+#couponsButton p {
+    -webkit-text-stroke: 1.5px #D38F0D;
+    font-size: 25px;
+    margin-left: 70px;
+    color: #D38F0D;
+}
+
+#feedbackPoints {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* ———————————————————————————————————————— Overlay Accept Category ———————————————————————————————————————— */
+
+#categoryTitle {
+    /* text-decoration: underline; */
+    font-size: 35px;
+}
+
+
+.clickCategoryScreen,
+.clickCategoryScreenSmoke,
+.clickCouponScreen,
+.clickCouponUseScreen,
+.overlayPopUp {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 1;
+}
+
+
+.clickCategoryContainer,
+.clickCategoryContainerSmoke,
+.addCouponContainer {
+    background-color: white;
+    width: calc(100% - 80px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    border-radius: 20px;
+    height: fit-content;
+    padding: 30px 20px 20px 20px;
+}
+
+.clickCategoryContainerSmoke p{
+    margin-bottom: 30px;
+}
+
+#clickCouponAddScreen label{
+    
+    text-align: center;
+    margin-top: 30px;
+    display: block;
+}
+
+#clickCouponAddScreen input{
+    font-size: 17px;
+    font-family: "Jura Bold";
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+#clickCouponAddScreen input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.clickCategoryContainer p {
+    width: 90%;
+    margin: auto;
+}
+
+
+.AddCouponText {
+    font-family: "Jura Bold";
+    width: 100%!important;
+    height: 70px;
+    /* position: fixed; */
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+    /* background-color: #FFF1C1; */
+    display: flex
+;
+    align-items: center;
+    font-size: 30px;
+    /* justify-content: center; */
+}
+
+.couponImageText{
+    margin-right: 20px;
+}
+
+
+.numberCigarettes {
+    background-color: transparent;
+    background-color: transparent;
+    font-family: "Jura Bold";
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.cigarreteButtonActive {
+    background-color: #FFD380;
+}
+
+
+
+.cancelButton,
+.acceptButton,
+#cancel,
+#accept,
+#acceptSmoke,
+#cancelSmoke {
+    border: none;
+    font-family: "Jura Bold";
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    /* margin: 40px 10px 00px 10px; */
+    background-color: #B21D1D;
+    display: block;
+}
+
+/* #cancel,
+#cancelSmoke {
+    background-color: #B21D1D;
+} */
+
+#accept,
+#acceptSmoke,
+.acceptButton {
+    background-color: #3DB149;
+}
+
+/* ———————————————————————————————————————— SETTINGS ———————————————————————————————————————— */
+
+
+.settingsPage, .couponsScreen {
+    display: none;
+}
+
+.backArrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 25px;
+    padding: 0;
+}
+
+
+.settingsList li {
+    margin-bottom: 20px;
+
+}
+
+.settingsList li p {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.settingsList input {
+    height: 30px;
+    border-radius: 10px;
+}
+
+.settingsList input{
+    font-size: 17px;
+    padding: 0px;
+    padding-left: 8px;
+    font-family: "Jura Bold";
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+h1 {
+    font-size: 30px;
+    opacity: 0.4;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.availableCouponsTitle{
+    font-size: 30px;
+    opacity: 0.4;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: none;
+}
+
+.settingsPage {
+    padding-left: 20px;
+    position: absolute;
+}
+
+#saveEditPoints {
+    width: 350px;
+
+    background-color: #50A16C;
+    border: none;
+    height: 70px;
+    color: white;
+    font-family: "Jura Bold";
+    font-size: 20px;
+    border-radius: 15px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 30px;
+}
+
+
+
+
+
+
+/* ———————————————————————————————————————— COUPONS ———————————————————————————————————————— */
+
+.couponDisabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.couponsScreen {
+    padding: 20px;
+}
+
+#addCoupon {
+    font-family: "Jura Bold";
+    width: 90%;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    background-color: #50A16C;
+    font-size: 25px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.couponScreenPointsContainer {
+    position: fixed;
+    top: 67px;
+    right: 20px;
+    text-align: end;
+}
+
+.couponPoints {
+    font-size: 70px;
+}
+
+.couponStoreList {
+    overflow: scroll;
+    height: auto;
+    max-height: calc(100vh - 300px);
+}
+
+.coupon,
+.available {
+    /* margin-bottom: 70px; */
+    width: -webkit-fill-available;
+    margin-right: 0;
+
+    background-color: #FFF1C1;
+    border-radius: 15px;
+    display: flex;
+    padding: 15px 0px;
+    align-items: center;
+}
+
+.available {
+    margin: auto;
+    width: 100%;
+}
+
+
+.available>.couponPrice {
+    display: none;
+}
+
+.newCouponFeedback {
+    animation: shadowAnimation 3s ease-in-out forwards;
+}
+
+
+.couponName {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.couponImage {
+    margin-left: 10px;
+}
+
+.couponPrice {
+    margin-left: auto;
+    /* Pushes the price to the far right */
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+
+.popUpPointsLine {
+    margin-top: 30px;
+}
+
+#couponPurchasePoints {
+    margin-top: 30px;
+    font-size: 50px;
+    display: block;
+}
+
+#nameOfUseCoupon,
+#nameOfCoupon,
+#categoryTitle {
+    display: block;
+    /* margin-top: 40px; */
+    line-height: 60px;
+    -webkit-text-stroke: 1px black;
+}
+
+.deleteCoupon {
+    border: none;
+    background-color: transparent;
+}
+
+.couponSingle {
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.feedback{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 4;
+    background-color: white;
+    color: #50A16C;
+    display: none;
+    text-align: center;
+}
+
+.feedback img{
+    margin-top: 220px;
+}
+
+.feedback p{
+    margin-top: 220px;
+    margin-top: 50px;
+    font-size: 22px;
+}
